@@ -222,10 +222,10 @@ input, select, textarea {
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);     */
-	/* Set your background with this */
 
-		background: #348cb2 url("images/bg.jpg") bottom left;
+		background: #348cb2 url("images/blue.png") ;
 		background-repeat: repeat-x;
+		background-repeat: repeat-y;
 		height: 100%;
 		left: 0;
 		opacity: 1;
