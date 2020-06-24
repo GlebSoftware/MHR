@@ -2106,11 +2106,11 @@ input, select, textarea {
 		position: relative;
 		padding: 4em 0 2em 0;
 		background-image: url("images/header.sv");
-		background-image: url("../../images_slideshow/splash/beach.jpg"), url("images/header.sv"), -moz-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
-		background-image: url("../../images_slideshow/splash/beach.jpg"), url("images/header.sv"), -moz-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
-		background-image: url("../../images_slideshow/splash/beach.jpg"), url("images/header.sv"), -webkit-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
-		background-image: url("../../images_slideshow/splash/beach.jpg"), url("images/header.sv"), -ms-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
-		background-image: url("../../images_slideshow/splash/beach.jpg"), url("images/header.sv"), linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
+		background-image: url("../../images_slideshow/splash/h2o.jpg"), url("images/header.sv"), -moz-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
+		background-image: url("../../images_slideshow/splash/h2o.jpg"), url("images/header.sv"), -moz-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
+		background-image: url("../../images_slideshow/splash/h2o.jpg"), url("images/header.sv"), -webkit-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
+		background-image: url("../../images_slideshow/splash/h2o.jpg"), url("images/header.sv"), -ms-linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
+		background-image: url("../../images_slideshow/splash/h2o.jpg"), url("images/header.sv"), linear-gradient(75deg, #FF7088 100%, #F2B69D 100%);
 		background-color: #f08c89;
 		background-size: 100% 620%;
 		background-size: 100% 620%, auto;
@@ -2162,7 +2162,7 @@ input, select, textarea {
 			border-color: rgba(255, 255, 255, 0.75);
 			border-top: 0;
 			border-radius: 0 0 0.35em 0.35em;
-			color: #000;
+			color: #fff;
 			display: inline-block;
 			font-weight: 600;
 			letter-spacing: 3px;
@@ -2199,7 +2199,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #000;
+					color: #fff;
 					text-decoration: none;
 					outline: 0;
 					border: 0;
@@ -2216,7 +2216,7 @@ input, select, textarea {
 				#nav > ul > li.active > span, #nav > ul > li.active > a {
 					border-color: rgba(255, 255, 255, 0.75);
 					background-color: rgba(255, 255, 255, 0.15);
-					color: #000;
+					color: #fff;
 				}
 
 				#nav > ul > li.first-child {
@@ -2318,9 +2318,9 @@ input, select, textarea {
 		}
 
 		#hero .button {
-			background: #ffff;
+			background:  #002A7F;
 			border-color: rgba(255, 255, 255, 0);
-			color: #000;
+			color: #fff;
 			font-size: 1.25em;
 		}
 
@@ -2867,10 +2867,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				background-image: url("images/navPanel.sv"), url("../../images_slideshow/splash/beach.jpg"), -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.25));
-				background-image: url("images/navPanel.sv"), url("../../images_slideshow/splash/beach.jpg"), -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.25));
-				background-image: url("images/navPanel.sv"), url("../../images_slideshow/splash/beach.jpg"), -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.25));
-				background-image: url("images/navPanel.sv"), url("../../images_slideshow/splash/beach.jpg"), linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.25));
+				
 				display: block;
 				left: 0;
 				overflow-y: auto;
@@ -2891,13 +2888,13 @@ input, select, textarea {
 					display: block;
 					text-decoration: none;
 					padding: 0.75em;
-					color: #000;
+					color: #fff;
 					border: 0;
-					border-top: dotted 1px rgba(255, 255, 255, 0.1);
+					border-top: dotted 1px rgba(255, 255, 255, 1);
 				}
 
 					#navPanel .link.depth-0 {
-						color: #000;
+						color: #fff;
 						font-weight: 400;
 					}
 
@@ -2927,7 +2924,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #000;
+					color: #fff;
 				}
 
 			body.navPanel-visible #page-wrapper {
