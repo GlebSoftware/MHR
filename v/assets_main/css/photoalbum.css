@@ -1,0 +1,82 @@
+/*
+ * Mi Thumb
+ * 
+ * Copyright 2017 Stuart Nicholls
+ * http://www.cssplay.co.uk/
+ * 
+ * version v1.0.0
+ */
+
+/* main image display - responsive */
+.mi_thumb {width:95%; max-width:1000px; position:relative; -webkit-tap-highlight-color: rgba(0,0,0,0); -ms-user-select: none; margin:50px auto; background:#000;}
+/* set up the aspect ratio of the main images - width:100% - height:0 - padding-bottom as percentage of width - in this demo 2:1 */
+.mi_thumb .mi_wrap {display:block; position:relative; left:0; top:0; width:100%; height:0; padding-bottom:50%; overflow:hidden;}
+
+.mi_thumb .mi_cont {position:absolute; left:0; top:0; width:100%; height:100%; transition-timing-function: linear; transform:translate3d(0,0,0); touch-action: pan-y; white-space:nowrap; font-size:0; cursor:grab;}
+.mi_thumb .mi_cont.grabbing {cursor:grabbing;}
+.mi_pane {width:100%; height:100%; display:inline-block; overflow:hidden; position:relative; background-position:center center; background-repeat:no-repeat; background-size:cover;}
+
+.mi_thumb .mi_pane .text {display:inline-block; position:absolute; left:10px; top:-100px; font:20px/40px verdana, arial, sans-serif; color:#fff; background:rgba(0,0,0,0.6); padding:0 25px; transition:0.25s 0.75s}
+.mi_thumb .mi_pane.current .text {top:10px;}
+
+/* bullets styling */
+.mi_thumb .bullets {display:inline-block; text-align:center; width:100%; height:10px; position:absolute; bottom:20px; left:50%; transform:translateX(-50%);}
+.mi_thumb .bullets span {display:inline-block; width:20px; height:10px; background:rgba(0,0,0,0.5); margin:0 5px;}
+.mi_thumb .bullets span.current {background:#f00;}
+
+/* thmbnail styling width:180px - height:90px */ 
+.mi_thumb .thumbs {display:block; position:absolute; left:0; top:100%; width:100%; height:90px; white-space:nowrap; font-size:0; overflow:hidden; background:#000; border-top:2px solid #000; border-bottom:2px solid #000;}
+.mi_thumb .thumbs .thumbInner {position:absolute; height:100%; left:50%; margin-left:-90px;}
+.mi_thumb .thumbs .thumbInner span {position:relative; width:180px; height:90px; display:inline-block; box-sizing:border-box; background-color:#000; opacity:0.6; transition:0.5s; background-position:center center; background-repeat:no-repeat; background-size:cover;}
+/* balck left/right borders on thumbnails */
+.mi_thumb .thumbs .thumbInner span::before {content:""; display:block; width:1px; height:100%; background:#000; position:absolute; left:0; top:0;}
+.mi_thumb .thumbs .thumbInner span::after {content:""; display:block; width:1px; height:100%; background:#000; position:absolute; right:0; top:0;}
+.mi_thumb .thumbs .thumbInner span.current {opacity:1;}
+.mi_thumb .thumbs .thumbInner span:hover {opacity:1; cursor:pointer;}
+.mi_thumb .thumbs .thumbInner span.current:hover {opacity:1; cursor:default;}
+
+/* main image left/right arrows */
+.mi_thumb .imageArrows {display:block; width:40px; height:40px; border-radius:40px; background:rgba(0,0,0,0.5); position:absolute; top:50%; margin-top:-20px; cursor:pointer;}
+.mi_thumb .imageArrows::before {content:""; display:block; width:16px; height:4px; position:absolute; left:14px; bottom:14px; background:#fff;}
+.mi_thumb .imageArrows::after {content:""; display:block; width:4px; height:16px; position:absolute; left:14px; bottom:14px; background:#fff;}
+.mi_thumb .imageArrows.imgprev {left:10px; transform:rotate(45deg);}
+.mi_thumb .imageArrows.imgnext {right:10px; transform:rotate(-135deg);}
+
+/* thumbnail left/right arrows */
+.mi_thumb .thumbArrows {display:block; width:40px; height:40px; border-radius:40px; background:rgba(0,0,0,0.5); position:absolute; bottom:-45px; margin-bottom:-20px; cursor:pointer;}
+.mi_thumb .thumbArrows::before {content:""; display:block; width:16px; height:4px; position:absolute; left:14px; bottom:14px; background:#fff;}
+.mi_thumb .thumbArrows::after {content:""; display:block; width:4px; height:16px; position:absolute; left:14px; bottom:14px; background:#fff;}
+.mi_thumb .thumbArrows.thbprev {left:10px; transform:rotate(45deg);}
+.mi_thumb .thumbArrows.thbnext {right:10px; transform:rotate(-135deg);}
+
+/* additional first image styling for loop */ 
+.mi_thumb .firstImage {display:block; width:100%; height:100%; position:absolute; top:0; overflow:hidden; background-position:center center; background-repeat:no-repeat; background-size:cover;
+-webkit-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+pointer-events: none;
+}
+
+/* additional last image styling for loop */ 
+.mi_thumb .lastImage {display:block; width:100%; height:100%; position:absolute; top:0; overflow:hidden; background-position:center center; background-repeat:no-repeat; background-size:cover;
+-webkit-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+pointer-events: none;
+}
+
+/* play/pause button styles */
+.mi_thumb .playpause {display:block; width:40px; height:40px; border-radius:40px; background:rgba(0,0,0,0.5); position:absolute; top:10px; right:10px; cursor:pointer;}
+.mi_thumb .play::before {content:""; display:block; width:0; height:0; position:absolute; left:14px; top:9px; border:16px solid transparent; border-left-color:#fff; border-width:10px 0 10px 16px; z-index:10;}
+.mi_thumb .paused::before {content:""; display:block; width:4px; height:17px; background:#fff; position:absolute; left:14px; top:11px;z-index:10;}
+.mi_thumb .paused::after {content:""; display:block; width:4px; height:17px; background:#fff; position:absolute; left:22px; top:11px;z-index:10;}
+
+/* responsive action at width 760px */
+@media only screen and (max-width: 760px) {
+.mi_thumb .mi_wrap {width:100%; height:360px; padding-bottom:0;}
+.mi_thumb .thumbs .thumbInner {margin-left:-50px;}
+.mi_thumb .thumbs .thumbInner span {width:100px; height:90px; position:relative; overflow:hidden;}
+}
+
